@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_492b69196e04387fe7bc6f7ed8cd2a15 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+     <div style="
+         position: fixed; 
+         top: 20px; left: 60px; width: 320px; 
+         z-index: 9999; font-family: 'Segoe UI', Arial, sans-serif;
+         ">
+       <div style="
+           background-color: white; 
+           opacity: 0.95; 
+           padding: 15px 20px; 
+           border-radius: 8px; 
+           box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+           border-left: 5px solid #0056b3;
+       ">
+         <h2 style="margin: 0; color: #333; font-size: 20px; font-weight: 700;">iRx Marketing Expansion</h2>
+         <p style="margin: 8px 0 0; font-size: 13px; color: #555; line-height: 1.4;">
+            <i class="fa fa-info-circle" aria-hidden="true" style="color: #0056b3;"></i> 
+            &nbsp;<b>Instruction:</b> Click a colored pin on the map to view detailed market research, statistics, and pilot targets.
+         </p>
+       </div>
+     </div>
+    
+            <div class="folium-map" id="map_492b69196e04387fe7bc6f7ed8cd2a15" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_492b69196e04387fe7bc6f7ed8cd2a15 = L.map(
+                "map_492b69196e04387fe7bc6f7ed8cd2a15",
+                {
+                    center: [37.0902, -95.7129],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f603e8fd02f2a10e5c4b1ed1558fae75 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_f603e8fd02f2a10e5c4b1ed1558fae75.addTo(map_492b69196e04387fe7bc6f7ed8cd2a15);
+        
+    
+            var marker_47877f08815c19b3a683a453845a62d8 = L.marker(
+                [41.8781, -87.6298],
+                {
+}
+            ).addTo(map_492b69196e04387fe7bc6f7ed8cd2a15);
+        
+    
+            var div_icon_f8445de2491a2242a5a1587a4599cd53 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"position: relative;\"\u003e\n                    \u003ci class=\"fa fa-map-marker\" style=\"\n                        position: absolute; left: -30px; top: -60px; \n                        color:#1E90FF; font-size: 60px; \n                        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                    \u003c/i\u003e\n                    \u003cdiv style=\"\n                        position: absolute; top: -55px; left: -240px; \n                        width: 220px; text-align: right;\"\u003e\n                        \u003cspan style=\"\n                            font-family: Arial; font-weight: 900; color: white; \n                            background-color: #1E90FF; padding: 6px 12px; \n                            border-radius: 6px; box-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                            Chicago\n                        \u003c/span\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [0, 0],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_fa20467fdedd1f5df34d8ad26d2d820a = L.popup({
+  "maxWidth": 360,
+});
+
+        
+            
+                var html_e80d2791b7cd8e35a3e0937b01e72a51 = $(`<div id="html_e80d2791b7cd8e35a3e0937b01e72a51" style="width: 100.0%; height: 100.0%;"> <div style="font-family: Arial; width: 340px; padding: 5px;">     <h4 style="margin: 0; color: #1E90FF; border-bottom: 2px solid #1E90FF; padding-bottom: 5px;">Cook County, IL</h4>     <div style="font-size: 11px; font-weight: bold; color: #1E90FF; margin-top: 4px;">PROFILE: Community Mental Health (CMHC)</div>     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">         <li style="margin-bottom: 8px;">High concentration of Medicaid-funded CMHCs and large hospital systems creating volume efficiency.</li>         <li style="margin-bottom: 8px;"><strong>1.2 Million residents</strong> (23% of county) needed behavioral health services in 2023.</li>         <li style="margin-bottom: 8px;">Heavy prevalence of mental health and SUD diagnoses necessitates automated monitoring.</li>         <li>Strong alignment for "enforcement" use cases driven by readmission penalty avoidance.</li>     </ul> </div> </div>`)[0];
+                popup_fa20467fdedd1f5df34d8ad26d2d820a.setContent(html_e80d2791b7cd8e35a3e0937b01e72a51);
+            
+        
+
+        marker_47877f08815c19b3a683a453845a62d8.bindPopup(popup_fa20467fdedd1f5df34d8ad26d2d820a)
+        ;
+
+        
+    
+    
+                marker_47877f08815c19b3a683a453845a62d8.setIcon(div_icon_f8445de2491a2242a5a1587a4599cd53);
+            
+    
+            var marker_3b3b88b28b10fa804c8b387d4bae6f74 = L.marker(
+                [41.4993, -81.6944],
+                {
+}
+            ).addTo(map_492b69196e04387fe7bc6f7ed8cd2a15);
+        
+    
+            var div_icon_afbe96104048d70f8be268beeea3ad5c = L.divIcon({
+  "html": "\n                \u003cdiv style=\"position: relative;\"\u003e\n                    \u003ci class=\"fa fa-map-marker\" style=\"\n                        position: absolute; left: -30px; top: -60px; \n                        color:#00008B; font-size: 60px; \n                        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                    \u003c/i\u003e\n                    \u003cdiv style=\"\n                        position: absolute; top: -55px; left: 50px; \n                        width: 220px; text-align: left;\"\u003e\n                        \u003cspan style=\"\n                            font-family: Arial; font-weight: 900; color: white; \n                            background-color: #00008B; padding: 6px 12px; \n                            border-radius: 6px; box-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                            Cleveland\n                        \u003c/span\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [0, 0],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_a11e897a38839afebe902388a8ec6a6a = L.popup({
+  "maxWidth": 360,
+});
+
+        
+            
+                var html_89ed647a8dccefbc36c103c4e8e0c2cf = $(`<div id="html_89ed647a8dccefbc36c103c4e8e0c2cf" style="width: 100.0%; height: 100.0%;"> <div style="font-family: Arial; width: 340px; padding: 5px;">     <h4 style="margin: 0; color: #00008B; border-bottom: 2px solid #00008B; padding-bottom: 5px;">Cuyahoga County, OH</h4>     <div style="font-size: 11px; font-weight: bold; color: #00008B; margin-top: 4px;">PROFILE: Community Mental Health (SUD Focus)</div>     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">         <li style="margin-bottom: 8px;">Consistently ranks among the highest national overdose rates (<strong>78% involving Fentanyl</strong>).</li>         <li style="margin-bottom: 8px;">Established behavioral health networks (MetroHealth, Cleveland Clinic) provide immediate pilot pathways.</li>         <li>Existing iRx collaborator presence streamlines entry for SUD adherence pilots.</li>     </ul> </div> </div>`)[0];
+                popup_a11e897a38839afebe902388a8ec6a6a.setContent(html_89ed647a8dccefbc36c103c4e8e0c2cf);
+            
+        
+
+        marker_3b3b88b28b10fa804c8b387d4bae6f74.bindPopup(popup_a11e897a38839afebe902388a8ec6a6a)
+        ;
+
+        
+    
+    
+                marker_3b3b88b28b10fa804c8b387d4bae6f74.setIcon(div_icon_afbe96104048d70f8be268beeea3ad5c);
+            
+    
+            var marker_eec0939f2adaf91817ad2c0a950e3b6b = L.marker(
+                [33.4484, -112.074],
+                {
+}
+            ).addTo(map_492b69196e04387fe7bc6f7ed8cd2a15);
+        
+    
+            var div_icon_56c8b1c156a3e8a571d539e62f8b0371 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"position: relative;\"\u003e\n                    \u003ci class=\"fa fa-map-marker\" style=\"\n                        position: absolute; left: -30px; top: -60px; \n                        color:#DC143C; font-size: 60px; \n                        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                    \u003c/i\u003e\n                    \u003cdiv style=\"\n                        position: absolute; top: -55px; left: -240px; \n                        width: 220px; text-align: right;\"\u003e\n                        \u003cspan style=\"\n                            font-family: Arial; font-weight: 900; color: white; \n                            background-color: #DC143C; padding: 6px 12px; \n                            border-radius: 6px; box-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                            Phoenix\n                        \u003c/span\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [0, 0],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_be7d60e3eaaf4f43d25f9786e4b05472 = L.popup({
+  "maxWidth": 360,
+});
+
+        
+            
+                var html_96d68418ace52cdbff5c05de930b0659 = $(`<div id="html_96d68418ace52cdbff5c05de930b0659" style="width: 100.0%; height: 100.0%;"> <div style="font-family: Arial; width: 340px; padding: 5px;">     <h4 style="margin: 0; color: #DC143C; border-bottom: 2px solid #DC143C; padding-bottom: 5px;">Maricopa County, AZ (Phoenix)</h4>     <div style="font-size: 11px; font-weight: bold; color: #DC143C; margin-top: 4px;">PROFILE: Hospital Transitional-Care (HTP)</div>     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">         <li style="margin-bottom: 8px;">One of the fastest-growing senior populations in the U.S.</li>         <li style="margin-bottom: 8px;">High Medicare Advantage penetration (<strong>56% vs 54% nat'l avg</strong>) → hospitals strongly incentivized to improve adherence.</li>         <li>Major health systems (Banner, Mayo, Dignity) actively running transitional-care and home-health pilots.</li>     </ul> </div> </div>`)[0];
+                popup_be7d60e3eaaf4f43d25f9786e4b05472.setContent(html_96d68418ace52cdbff5c05de930b0659);
+            
+        
+
+        marker_eec0939f2adaf91817ad2c0a950e3b6b.bindPopup(popup_be7d60e3eaaf4f43d25f9786e4b05472)
+        ;
+
+        
+    
+    
+                marker_eec0939f2adaf91817ad2c0a950e3b6b.setIcon(div_icon_56c8b1c156a3e8a571d539e62f8b0371);
+            
+    
+            var marker_dfa61676e6448a358e5b854436a42303 = L.marker(
+                [25.7617, -80.1918],
+                {
+}
+            ).addTo(map_492b69196e04387fe7bc6f7ed8cd2a15);
+        
+    
+            var div_icon_4dc840a84083736c780a26fa0d86df59 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"position: relative;\"\u003e\n                    \u003ci class=\"fa fa-map-marker\" style=\"\n                        position: absolute; left: -30px; top: -60px; \n                        color:#20B2AA; font-size: 60px; \n                        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                    \u003c/i\u003e\n                    \u003cdiv style=\"\n                        position: absolute; top: -55px; left: 50px; \n                        width: 220px; text-align: left;\"\u003e\n                        \u003cspan style=\"\n                            font-family: Arial; font-weight: 900; color: white; \n                            background-color: #20B2AA; padding: 6px 12px; \n                            border-radius: 6px; box-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                            Miami\n                        \u003c/span\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [0, 0],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_71cc05732377c6353b65df620d7113bc = L.popup({
+  "maxWidth": 360,
+});
+
+        
+            
+                var html_3c76afbc55989c57295ab2c5e018b0b3 = $(`<div id="html_3c76afbc55989c57295ab2c5e018b0b3" style="width: 100.0%; height: 100.0%;"> <div style="font-family: Arial; width: 340px; padding: 5px;">     <h4 style="margin: 0; color: #20B2AA; border-bottom: 2px solid #20B2AA; padding-bottom: 5px;">Miami-Dade & Broward, FL</h4>     <div style="font-size: 11px; font-weight: bold; color: #20B2AA; margin-top: 4px;">PROFILE: Hospital Transitional-Care (HTP)</div>     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">         <li style="margin-bottom: 8px;">Florida has one of the oldest populations nationally (<strong>21%+ over age 65</strong>).</li>         <li style="margin-bottom: 8px;">High chronic disease burden (hypertension, diabetes, CHF) → medication-heavy regimens.</li>         <li>Strong telehealth adoption → aligns well with iRx’s app-centered workflow.</li>     </ul> </div> </div>`)[0];
+                popup_71cc05732377c6353b65df620d7113bc.setContent(html_3c76afbc55989c57295ab2c5e018b0b3);
+            
+        
+
+        marker_dfa61676e6448a358e5b854436a42303.bindPopup(popup_71cc05732377c6353b65df620d7113bc)
+        ;
+
+        
+    
+    
+                marker_dfa61676e6448a358e5b854436a42303.setIcon(div_icon_4dc840a84083736c780a26fa0d86df59);
+            
+    
+            var marker_8adaa1a5e4d02039505b05985bed8455 = L.marker(
+                [34.0522, -118.2437],
+                {
+}
+            ).addTo(map_492b69196e04387fe7bc6f7ed8cd2a15);
+        
+    
+            var div_icon_d7b19d2d43a2c472ad7953bf8acdead3 = L.divIcon({
+  "html": "\n                \u003cdiv style=\"position: relative;\"\u003e\n                    \u003ci class=\"fa fa-map-marker\" style=\"\n                        position: absolute; left: -30px; top: -60px; \n                        color:#800080; font-size: 60px; \n                        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                    \u003c/i\u003e\n                    \u003cdiv style=\"\n                        position: absolute; top: -55px; left: 50px; \n                        width: 220px; text-align: left;\"\u003e\n                        \u003cspan style=\"\n                            font-family: Arial; font-weight: 900; color: white; \n                            background-color: #800080; padding: 6px 12px; \n                            border-radius: 6px; box-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                            Los Angeles\n                        \u003c/span\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            ",
+  "iconSize": [0, 0],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+        var popup_ba5cde10e4f855fc66bb62f3aba86066 = L.popup({
+  "maxWidth": 360,
+});
+
+        
+            
+                var html_524bd10d268bc9b3f4ad0217fc56fb02 = $(`<div id="html_524bd10d268bc9b3f4ad0217fc56fb02" style="width: 100.0%; height: 100.0%;"> <div style="font-family: Arial; width: 340px; padding: 5px;">     <h4 style="margin: 0; color: #800080; border-bottom: 2px solid #800080; padding-bottom: 5px;">Los Angeles County, CA</h4>     <div style="font-size: 11px; font-weight: bold; color: #800080; margin-top: 4px;">PROFILE: Hospital Transitional-Care (HTP)</div>     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">         <li style="margin-bottom: 8px;">Largest county in the U.S. with highly complex care needs (<strong>1.7M safety-net patients</strong>).</li>         <li style="margin-bottom: 8px;">Significant older adult population + major public hospital networks (LAC-USC, Kaiser, UCLA).</li>         <li>California’s innovation-friendly digital health ecosystem ideal for pilot adoption.</li>     </ul> </div> </div>`)[0];
+                popup_ba5cde10e4f855fc66bb62f3aba86066.setContent(html_524bd10d268bc9b3f4ad0217fc56fb02);
+            
+        
+
+        marker_8adaa1a5e4d02039505b05985bed8455.bindPopup(popup_ba5cde10e4f855fc66bb62f3aba86066)
+        ;
+
+        
+    
+    
+                marker_8adaa1a5e4d02039505b05985bed8455.setIcon(div_icon_d7b19d2d43a2c472ad7953bf8acdead3);
+            
+</script>
+</html>
