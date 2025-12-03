@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_492b69196e04387fe7bc6f7ed8cd2a15 {
+                #map_ed00b2129120f50bf22064a9873467d9 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -75,14 +75,33 @@
        </div>
      </div>
     
-            <div class="folium-map" id="map_492b69196e04387fe7bc6f7ed8cd2a15" ></div>
+<div style="
+    position: fixed;
+    bottom: 20px; right: 20px; width: 360px;
+    background-color: white;
+    opacity: 0.95;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-family: Arial;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 9999;">
+<h4 style="margin:0; font-size:14px; font-weight:700;">Data Sources</h4>
+<ul style="font-size: 12px; margin-top:6px; padding-left:18px; line-height:1.4;">
+    <li>NAMI Illinois – Mental Health Statistics</li>
+    <li>CDC & Ohio Department of Health – Overdose & fentanyl data</li>
+    <li>U.S. Census Bureau – Aging population & county demographics</li>
+    <li>KFF – Medicare Advantage penetration by county</li>
+</ul>
+</div>
+    
+            <div class="folium-map" id="map_ed00b2129120f50bf22064a9873467d9" ></div>
         
 </body>
 <script>
     
     
-            var map_492b69196e04387fe7bc6f7ed8cd2a15 = L.map(
-                "map_492b69196e04387fe7bc6f7ed8cd2a15",
+            var map_ed00b2129120f50bf22064a9873467d9 = L.map(
+                "map_ed00b2129120f50bf22064a9873467d9",
                 {
                     center: [37.0902, -95.7129],
                     crs: L.CRS.EPSG3857,
@@ -99,7 +118,7 @@
 
         
     
-            var tile_layer_f603e8fd02f2a10e5c4b1ed1558fae75 = L.tileLayer(
+            var tile_layer_505618e942a6a416c1576c853ca95f52 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -116,17 +135,17 @@
             );
         
     
-            tile_layer_f603e8fd02f2a10e5c4b1ed1558fae75.addTo(map_492b69196e04387fe7bc6f7ed8cd2a15);
+            tile_layer_505618e942a6a416c1576c853ca95f52.addTo(map_ed00b2129120f50bf22064a9873467d9);
         
     
-            var marker_47877f08815c19b3a683a453845a62d8 = L.marker(
+            var marker_00a31df6ceceb96b221c934d570ae41b = L.marker(
                 [41.8781, -87.6298],
                 {
 }
-            ).addTo(map_492b69196e04387fe7bc6f7ed8cd2a15);
+            ).addTo(map_ed00b2129120f50bf22064a9873467d9);
         
     
-            var div_icon_f8445de2491a2242a5a1587a4599cd53 = L.divIcon({
+            var div_icon_967f323aabe9e8ff3f573e1f68df2f86 = L.divIcon({
   "html": "\n                \u003cdiv style=\"position: relative;\"\u003e\n                    \u003ci class=\"fa fa-map-marker\" style=\"\n                        position: absolute; left: -30px; top: -60px; \n                        color:#1E90FF; font-size: 60px; \n                        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                    \u003c/i\u003e\n                    \u003cdiv style=\"\n                        position: absolute; top: -55px; left: -240px; \n                        width: 220px; text-align: right;\"\u003e\n                        \u003cspan style=\"\n                            font-family: Arial; font-weight: 900; color: white; \n                            background-color: #1E90FF; padding: 6px 12px; \n                            border-radius: 6px; box-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                            Chicago\n                        \u003c/span\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            ",
   "iconSize": [0, 0],
   "iconAnchor": [0, 0],
@@ -134,34 +153,34 @@
 });
         
     
-        var popup_fa20467fdedd1f5df34d8ad26d2d820a = L.popup({
+        var popup_f317a67cfd948c3696e74d10f3c69e81 = L.popup({
   "maxWidth": 360,
 });
 
         
             
-                var html_e80d2791b7cd8e35a3e0937b01e72a51 = $(`<div id="html_e80d2791b7cd8e35a3e0937b01e72a51" style="width: 100.0%; height: 100.0%;"> <div style="font-family: Arial; width: 340px; padding: 5px;">     <h4 style="margin: 0; color: #1E90FF; border-bottom: 2px solid #1E90FF; padding-bottom: 5px;">Cook County, IL</h4>     <div style="font-size: 11px; font-weight: bold; color: #1E90FF; margin-top: 4px;">PROFILE: Community Mental Health (CMHC)</div>     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">         <li style="margin-bottom: 8px;">High concentration of Medicaid-funded CMHCs and large hospital systems creating volume efficiency.</li>         <li style="margin-bottom: 8px;"><strong>1.2 Million residents</strong> (23% of county) needed behavioral health services in 2023.</li>         <li style="margin-bottom: 8px;">Heavy prevalence of mental health and SUD diagnoses necessitates automated monitoring.</li>         <li>Strong alignment for "enforcement" use cases driven by readmission penalty avoidance.</li>     </ul> </div> </div>`)[0];
-                popup_fa20467fdedd1f5df34d8ad26d2d820a.setContent(html_e80d2791b7cd8e35a3e0937b01e72a51);
+                var html_e7b72897f583ba84b6b60b54795ca5d5 = $(`<div id="html_e7b72897f583ba84b6b60b54795ca5d5" style="width: 100.0%; height: 100.0%;"> <div style="font-family: Arial; width: 340px; padding: 5px;">     <h4 style="margin: 0; color: #1E90FF; border-bottom: 2px solid #1E90FF; padding-bottom: 5px;">Cook County, IL</h4>     <div style="font-size: 11px; font-weight: bold; color: #1E90FF; margin-top: 4px;">PROFILE: Community Mental Health (CMHC)</div>     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">         <li style="margin-bottom: 8px;">One of the nation’s largest Medicaid populations with high behavioral-health demand.</li>         <li style="margin-bottom: 8px;">Estimated <strong>1M+ adults</strong> experience mental illness annually (NAMI Illinois).</li>         <li style="margin-bottom: 8px;">High SMI and SUD prevalence concentrated in South & West Side neighborhoods.</li>         <li>Large CMHC and safety-net hospital networks create strong alignment for adherence-focused tools.</li>     </ul> </div> </div>`)[0];
+                popup_f317a67cfd948c3696e74d10f3c69e81.setContent(html_e7b72897f583ba84b6b60b54795ca5d5);
             
         
 
-        marker_47877f08815c19b3a683a453845a62d8.bindPopup(popup_fa20467fdedd1f5df34d8ad26d2d820a)
+        marker_00a31df6ceceb96b221c934d570ae41b.bindPopup(popup_f317a67cfd948c3696e74d10f3c69e81)
         ;
 
         
     
     
-                marker_47877f08815c19b3a683a453845a62d8.setIcon(div_icon_f8445de2491a2242a5a1587a4599cd53);
+                marker_00a31df6ceceb96b221c934d570ae41b.setIcon(div_icon_967f323aabe9e8ff3f573e1f68df2f86);
             
     
-            var marker_3b3b88b28b10fa804c8b387d4bae6f74 = L.marker(
+            var marker_21fda0fc2d1e53d0f857c154967f5f36 = L.marker(
                 [41.4993, -81.6944],
                 {
 }
-            ).addTo(map_492b69196e04387fe7bc6f7ed8cd2a15);
+            ).addTo(map_ed00b2129120f50bf22064a9873467d9);
         
     
-            var div_icon_afbe96104048d70f8be268beeea3ad5c = L.divIcon({
+            var div_icon_3db33a053773756a54d08098ce98ee32 = L.divIcon({
   "html": "\n                \u003cdiv style=\"position: relative;\"\u003e\n                    \u003ci class=\"fa fa-map-marker\" style=\"\n                        position: absolute; left: -30px; top: -60px; \n                        color:#00008B; font-size: 60px; \n                        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                    \u003c/i\u003e\n                    \u003cdiv style=\"\n                        position: absolute; top: -55px; left: 50px; \n                        width: 220px; text-align: left;\"\u003e\n                        \u003cspan style=\"\n                            font-family: Arial; font-weight: 900; color: white; \n                            background-color: #00008B; padding: 6px 12px; \n                            border-radius: 6px; box-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                            Cleveland\n                        \u003c/span\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            ",
   "iconSize": [0, 0],
   "iconAnchor": [0, 0],
@@ -169,34 +188,34 @@
 });
         
     
-        var popup_a11e897a38839afebe902388a8ec6a6a = L.popup({
+        var popup_d0435a2356f18751738e28157c6399f5 = L.popup({
   "maxWidth": 360,
 });
 
         
             
-                var html_89ed647a8dccefbc36c103c4e8e0c2cf = $(`<div id="html_89ed647a8dccefbc36c103c4e8e0c2cf" style="width: 100.0%; height: 100.0%;"> <div style="font-family: Arial; width: 340px; padding: 5px;">     <h4 style="margin: 0; color: #00008B; border-bottom: 2px solid #00008B; padding-bottom: 5px;">Cuyahoga County, OH</h4>     <div style="font-size: 11px; font-weight: bold; color: #00008B; margin-top: 4px;">PROFILE: Community Mental Health (SUD Focus)</div>     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">         <li style="margin-bottom: 8px;">Consistently ranks among the highest national overdose rates (<strong>78% involving Fentanyl</strong>).</li>         <li style="margin-bottom: 8px;">Established behavioral health networks (MetroHealth, Cleveland Clinic) provide immediate pilot pathways.</li>         <li>Existing iRx collaborator presence streamlines entry for SUD adherence pilots.</li>     </ul> </div> </div>`)[0];
-                popup_a11e897a38839afebe902388a8ec6a6a.setContent(html_89ed647a8dccefbc36c103c4e8e0c2cf);
+                var html_6d4523fed7b8ab9142b523014fb0dad5 = $(`<div id="html_6d4523fed7b8ab9142b523014fb0dad5" style="width: 100.0%; height: 100.0%;"> <div style="font-family: Arial; width: 340px; padding: 5px;">     <h4 style="margin: 0; color: #00008B; border-bottom: 2px solid #00008B; padding-bottom: 5px;">Cuyahoga County, OH</h4>     <div style="font-size: 11px; font-weight: bold; color: #00008B; margin-top: 4px;">PROFILE: Community Mental Health (SUD Focus)</div>     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">         <li style="margin-bottom: 8px;">Among the highest overdose death rates in the U.S., with <strong>80%+ fentanyl involvement</strong> (CDC, Ohio Dept. of Health).</li>         <li style="margin-bottom: 8px;">High SUD burden and chronic relapse cycles increase need for structured dosing support.</li>         <li>MetroHealth & Cleveland Clinic behavioral-health networks create immediate pilot pathways.</li>     </ul> </div> </div>`)[0];
+                popup_d0435a2356f18751738e28157c6399f5.setContent(html_6d4523fed7b8ab9142b523014fb0dad5);
             
         
 
-        marker_3b3b88b28b10fa804c8b387d4bae6f74.bindPopup(popup_a11e897a38839afebe902388a8ec6a6a)
+        marker_21fda0fc2d1e53d0f857c154967f5f36.bindPopup(popup_d0435a2356f18751738e28157c6399f5)
         ;
 
         
     
     
-                marker_3b3b88b28b10fa804c8b387d4bae6f74.setIcon(div_icon_afbe96104048d70f8be268beeea3ad5c);
+                marker_21fda0fc2d1e53d0f857c154967f5f36.setIcon(div_icon_3db33a053773756a54d08098ce98ee32);
             
     
-            var marker_eec0939f2adaf91817ad2c0a950e3b6b = L.marker(
+            var marker_ab01f4df58378658f6643e5b870cc8d7 = L.marker(
                 [33.4484, -112.074],
                 {
 }
-            ).addTo(map_492b69196e04387fe7bc6f7ed8cd2a15);
+            ).addTo(map_ed00b2129120f50bf22064a9873467d9);
         
     
-            var div_icon_56c8b1c156a3e8a571d539e62f8b0371 = L.divIcon({
+            var div_icon_19233168d0138c37e94f4165861f5a21 = L.divIcon({
   "html": "\n                \u003cdiv style=\"position: relative;\"\u003e\n                    \u003ci class=\"fa fa-map-marker\" style=\"\n                        position: absolute; left: -30px; top: -60px; \n                        color:#DC143C; font-size: 60px; \n                        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                    \u003c/i\u003e\n                    \u003cdiv style=\"\n                        position: absolute; top: -55px; left: -240px; \n                        width: 220px; text-align: right;\"\u003e\n                        \u003cspan style=\"\n                            font-family: Arial; font-weight: 900; color: white; \n                            background-color: #DC143C; padding: 6px 12px; \n                            border-radius: 6px; box-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                            Phoenix\n                        \u003c/span\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            ",
   "iconSize": [0, 0],
   "iconAnchor": [0, 0],
@@ -204,34 +223,34 @@
 });
         
     
-        var popup_be7d60e3eaaf4f43d25f9786e4b05472 = L.popup({
+        var popup_e52e0cc42fdacb4aae3b06a30ab39aa4 = L.popup({
   "maxWidth": 360,
 });
 
         
             
-                var html_96d68418ace52cdbff5c05de930b0659 = $(`<div id="html_96d68418ace52cdbff5c05de930b0659" style="width: 100.0%; height: 100.0%;"> <div style="font-family: Arial; width: 340px; padding: 5px;">     <h4 style="margin: 0; color: #DC143C; border-bottom: 2px solid #DC143C; padding-bottom: 5px;">Maricopa County, AZ (Phoenix)</h4>     <div style="font-size: 11px; font-weight: bold; color: #DC143C; margin-top: 4px;">PROFILE: Hospital Transitional-Care (HTP)</div>     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">         <li style="margin-bottom: 8px;">One of the fastest-growing senior populations in the U.S.</li>         <li style="margin-bottom: 8px;">High Medicare Advantage penetration (<strong>56% vs 54% nat'l avg</strong>) → hospitals strongly incentivized to improve adherence.</li>         <li>Major health systems (Banner, Mayo, Dignity) actively running transitional-care and home-health pilots.</li>     </ul> </div> </div>`)[0];
-                popup_be7d60e3eaaf4f43d25f9786e4b05472.setContent(html_96d68418ace52cdbff5c05de930b0659);
+                var html_8515af222ecff5904dd61bbe2f2193b7 = $(`<div id="html_8515af222ecff5904dd61bbe2f2193b7" style="width: 100.0%; height: 100.0%;"> <div style="font-family: Arial; width: 340px; padding: 5px;">     <h4 style="margin: 0; color: #DC143C; border-bottom: 2px solid #DC143C; padding-bottom: 5px;">Maricopa County, AZ (Phoenix)</h4>     <div style="font-size: 11px; font-weight: bold; color: #DC143C; margin-top: 4px;">PROFILE: Hospital Transitional-Care (HTP)</div>     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">         <li style="margin-bottom: 8px;">One of the fastest-growing senior populations nationally (U.S. Census).</li>         <li style="margin-bottom: 8px;">High Medicare Advantage penetration (~<strong>55–56%</strong>) increases value-based care incentives.</li>         <li>Banner, Dignity, and Mayo operate large transitional-care & home-health programs supportive of adherence pilots.</li>     </ul> </div> </div>`)[0];
+                popup_e52e0cc42fdacb4aae3b06a30ab39aa4.setContent(html_8515af222ecff5904dd61bbe2f2193b7);
             
         
 
-        marker_eec0939f2adaf91817ad2c0a950e3b6b.bindPopup(popup_be7d60e3eaaf4f43d25f9786e4b05472)
+        marker_ab01f4df58378658f6643e5b870cc8d7.bindPopup(popup_e52e0cc42fdacb4aae3b06a30ab39aa4)
         ;
 
         
     
     
-                marker_eec0939f2adaf91817ad2c0a950e3b6b.setIcon(div_icon_56c8b1c156a3e8a571d539e62f8b0371);
+                marker_ab01f4df58378658f6643e5b870cc8d7.setIcon(div_icon_19233168d0138c37e94f4165861f5a21);
             
     
-            var marker_dfa61676e6448a358e5b854436a42303 = L.marker(
+            var marker_da36ae9e7ae47fcb49033c98ba8843d3 = L.marker(
                 [25.7617, -80.1918],
                 {
 }
-            ).addTo(map_492b69196e04387fe7bc6f7ed8cd2a15);
+            ).addTo(map_ed00b2129120f50bf22064a9873467d9);
         
     
-            var div_icon_4dc840a84083736c780a26fa0d86df59 = L.divIcon({
+            var div_icon_fef0c71e3b08eca4aad579493a3533c1 = L.divIcon({
   "html": "\n                \u003cdiv style=\"position: relative;\"\u003e\n                    \u003ci class=\"fa fa-map-marker\" style=\"\n                        position: absolute; left: -30px; top: -60px; \n                        color:#20B2AA; font-size: 60px; \n                        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                    \u003c/i\u003e\n                    \u003cdiv style=\"\n                        position: absolute; top: -55px; left: 50px; \n                        width: 220px; text-align: left;\"\u003e\n                        \u003cspan style=\"\n                            font-family: Arial; font-weight: 900; color: white; \n                            background-color: #20B2AA; padding: 6px 12px; \n                            border-radius: 6px; box-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                            Miami\n                        \u003c/span\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            ",
   "iconSize": [0, 0],
   "iconAnchor": [0, 0],
@@ -239,34 +258,34 @@
 });
         
     
-        var popup_71cc05732377c6353b65df620d7113bc = L.popup({
+        var popup_7834deb8d39751d464bdc011e6fc582a = L.popup({
   "maxWidth": 360,
 });
 
         
             
-                var html_3c76afbc55989c57295ab2c5e018b0b3 = $(`<div id="html_3c76afbc55989c57295ab2c5e018b0b3" style="width: 100.0%; height: 100.0%;"> <div style="font-family: Arial; width: 340px; padding: 5px;">     <h4 style="margin: 0; color: #20B2AA; border-bottom: 2px solid #20B2AA; padding-bottom: 5px;">Miami-Dade & Broward, FL</h4>     <div style="font-size: 11px; font-weight: bold; color: #20B2AA; margin-top: 4px;">PROFILE: Hospital Transitional-Care (HTP)</div>     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">         <li style="margin-bottom: 8px;">Florida has one of the oldest populations nationally (<strong>21%+ over age 65</strong>).</li>         <li style="margin-bottom: 8px;">High chronic disease burden (hypertension, diabetes, CHF) → medication-heavy regimens.</li>         <li>Strong telehealth adoption → aligns well with iRx’s app-centered workflow.</li>     </ul> </div> </div>`)[0];
-                popup_71cc05732377c6353b65df620d7113bc.setContent(html_3c76afbc55989c57295ab2c5e018b0b3);
+                var html_d20bc3b05e85fad6f8563802a481a313 = $(`<div id="html_d20bc3b05e85fad6f8563802a481a313" style="width: 100.0%; height: 100.0%;"> <div style="font-family: Arial; width: 340px; padding: 5px;">     <h4 style="margin: 0; color: #20B2AA; border-bottom: 2px solid #20B2AA; padding-bottom: 5px;">Miami-Dade & Broward, FL</h4>     <div style="font-size: 11px; font-weight: bold; color: #20B2AA; margin-top: 4px;">PROFILE: Hospital Transitional-Care (HTP)</div>     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">         <li style="margin-bottom: 8px;">One of the oldest populations nationally, with <strong>20–21% over age 65</strong> (U.S. Census).</li>         <li style="margin-bottom: 8px;">High chronic-disease prevalence (diabetes, hypertension, CHF) requiring medication-intensive care.</li>         <li>High telehealth utilization levels support iRx’s remote adherence monitoring workflow.</li>     </ul> </div> </div>`)[0];
+                popup_7834deb8d39751d464bdc011e6fc582a.setContent(html_d20bc3b05e85fad6f8563802a481a313);
             
         
 
-        marker_dfa61676e6448a358e5b854436a42303.bindPopup(popup_71cc05732377c6353b65df620d7113bc)
+        marker_da36ae9e7ae47fcb49033c98ba8843d3.bindPopup(popup_7834deb8d39751d464bdc011e6fc582a)
         ;
 
         
     
     
-                marker_dfa61676e6448a358e5b854436a42303.setIcon(div_icon_4dc840a84083736c780a26fa0d86df59);
+                marker_da36ae9e7ae47fcb49033c98ba8843d3.setIcon(div_icon_fef0c71e3b08eca4aad579493a3533c1);
             
     
-            var marker_8adaa1a5e4d02039505b05985bed8455 = L.marker(
+            var marker_7be8771882e867310d0a068317bcd698 = L.marker(
                 [34.0522, -118.2437],
                 {
 }
-            ).addTo(map_492b69196e04387fe7bc6f7ed8cd2a15);
+            ).addTo(map_ed00b2129120f50bf22064a9873467d9);
         
     
-            var div_icon_d7b19d2d43a2c472ad7953bf8acdead3 = L.divIcon({
+            var div_icon_39205d65c99f69afe163089ec872025d = L.divIcon({
   "html": "\n                \u003cdiv style=\"position: relative;\"\u003e\n                    \u003ci class=\"fa fa-map-marker\" style=\"\n                        position: absolute; left: -30px; top: -60px; \n                        color:#800080; font-size: 60px; \n                        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                    \u003c/i\u003e\n                    \u003cdiv style=\"\n                        position: absolute; top: -55px; left: 50px; \n                        width: 220px; text-align: left;\"\u003e\n                        \u003cspan style=\"\n                            font-family: Arial; font-weight: 900; color: white; \n                            background-color: #800080; padding: 6px 12px; \n                            border-radius: 6px; box-shadow: 2px 2px 4px rgba(0,0,0,0.3);\"\u003e\n                            Los Angeles\n                        \u003c/span\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            ",
   "iconSize": [0, 0],
   "iconAnchor": [0, 0],
@@ -274,24 +293,24 @@
 });
         
     
-        var popup_ba5cde10e4f855fc66bb62f3aba86066 = L.popup({
+        var popup_5750b74a8c6ca275a788efb70879b6cc = L.popup({
   "maxWidth": 360,
 });
 
         
             
-                var html_524bd10d268bc9b3f4ad0217fc56fb02 = $(`<div id="html_524bd10d268bc9b3f4ad0217fc56fb02" style="width: 100.0%; height: 100.0%;"> <div style="font-family: Arial; width: 340px; padding: 5px;">     <h4 style="margin: 0; color: #800080; border-bottom: 2px solid #800080; padding-bottom: 5px;">Los Angeles County, CA</h4>     <div style="font-size: 11px; font-weight: bold; color: #800080; margin-top: 4px;">PROFILE: Hospital Transitional-Care (HTP)</div>     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">         <li style="margin-bottom: 8px;">Largest county in the U.S. with highly complex care needs (<strong>1.7M safety-net patients</strong>).</li>         <li style="margin-bottom: 8px;">Significant older adult population + major public hospital networks (LAC-USC, Kaiser, UCLA).</li>         <li>California’s innovation-friendly digital health ecosystem ideal for pilot adoption.</li>     </ul> </div> </div>`)[0];
-                popup_ba5cde10e4f855fc66bb62f3aba86066.setContent(html_524bd10d268bc9b3f4ad0217fc56fb02);
+                var html_a515642b0c7489d5a3952108cd70efef = $(`<div id="html_a515642b0c7489d5a3952108cd70efef" style="width: 100.0%; height: 100.0%;"> <div style="font-family: Arial; width: 340px; padding: 5px;">     <h4 style="margin: 0; color: #800080; border-bottom: 2px solid #800080; padding-bottom: 5px;">Los Angeles County, CA</h4>     <div style="font-size: 11px; font-weight: bold; color: #800080; margin-top: 4px;">PROFILE: Hospital Transitional-Care (HTP)</div>     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">         <li style="margin-bottom: 8px;">Largest county in the U.S. with substantial aging and medically complex populations.</li>         <li style="margin-bottom: 8px;">Major public systems (LAC-USC, Kaiser, UCLA) operate robust transitional-care programs.</li>         <li>California’s strong digital-health adoption climate supports pilot scalability.</li>     </ul> </div> </div>`)[0];
+                popup_5750b74a8c6ca275a788efb70879b6cc.setContent(html_a515642b0c7489d5a3952108cd70efef);
             
         
 
-        marker_8adaa1a5e4d02039505b05985bed8455.bindPopup(popup_ba5cde10e4f855fc66bb62f3aba86066)
+        marker_7be8771882e867310d0a068317bcd698.bindPopup(popup_5750b74a8c6ca275a788efb70879b6cc)
         ;
 
         
     
     
-                marker_8adaa1a5e4d02039505b05985bed8455.setIcon(div_icon_d7b19d2d43a2c472ad7953bf8acdead3);
+                marker_7be8771882e867310d0a068317bcd698.setIcon(div_icon_39205d65c99f69afe163089ec872025d);
             
 </script>
 </html>

@@ -40,10 +40,10 @@ cook_html = """
     <h4 style="margin: 0; color: #1E90FF; border-bottom: 2px solid #1E90FF; padding-bottom: 5px;">Cook County, IL</h4>
     <div style="font-size: 11px; font-weight: bold; color: #1E90FF; margin-top: 4px;">PROFILE: Community Mental Health (CMHC)</div>
     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">
-        <li style="margin-bottom: 8px;">High concentration of Medicaid-funded CMHCs and large hospital systems creating volume efficiency.</li>
-        <li style="margin-bottom: 8px;"><strong>1.2 Million residents</strong> (23% of county) needed behavioral health services in 2023.</li>
-        <li style="margin-bottom: 8px;">Heavy prevalence of mental health and SUD diagnoses necessitates automated monitoring.</li>
-        <li>Strong alignment for "enforcement" use cases driven by readmission penalty avoidance.</li>
+        <li style="margin-bottom: 8px;">One of the nation’s largest Medicaid populations with high behavioral-health demand.</li>
+        <li style="margin-bottom: 8px;">Estimated <strong>1M+ adults</strong> experience mental illness annually (NAMI Illinois).</li>
+        <li style="margin-bottom: 8px;">High SMI and SUD prevalence concentrated in South & West Side neighborhoods.</li>
+        <li>Large CMHC and safety-net hospital networks create strong alignment for adherence-focused tools.</li>
     </ul>
 </div>
 """
@@ -54,9 +54,9 @@ cuyahoga_html = """
     <h4 style="margin: 0; color: #00008B; border-bottom: 2px solid #00008B; padding-bottom: 5px;">Cuyahoga County, OH</h4>
     <div style="font-size: 11px; font-weight: bold; color: #00008B; margin-top: 4px;">PROFILE: Community Mental Health (SUD Focus)</div>
     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">
-        <li style="margin-bottom: 8px;">Consistently ranks among the highest national overdose rates (<strong>78% involving Fentanyl</strong>).</li>
-        <li style="margin-bottom: 8px;">Established behavioral health networks (MetroHealth, Cleveland Clinic) provide immediate pilot pathways.</li>
-        <li>Existing iRx collaborator presence streamlines entry for SUD adherence pilots.</li>
+        <li style="margin-bottom: 8px;">Among the highest overdose death rates in the U.S., with <strong>80%+ fentanyl involvement</strong> (CDC, Ohio Dept. of Health).</li>
+        <li style="margin-bottom: 8px;">High SUD burden and chronic relapse cycles increase need for structured dosing support.</li>
+        <li>MetroHealth & Cleveland Clinic behavioral-health networks create immediate pilot pathways.</li>
     </ul>
 </div>
 """
@@ -73,9 +73,9 @@ maricopa_html = """
     <h4 style="margin: 0; color: #DC143C; border-bottom: 2px solid #DC143C; padding-bottom: 5px;">Maricopa County, AZ (Phoenix)</h4>
     <div style="font-size: 11px; font-weight: bold; color: #DC143C; margin-top: 4px;">PROFILE: Hospital Transitional-Care (HTP)</div>
     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">
-        <li style="margin-bottom: 8px;">One of the fastest-growing senior populations in the U.S.</li>
-        <li style="margin-bottom: 8px;">High Medicare Advantage penetration (<strong>56% vs 54% nat'l avg</strong>) → hospitals strongly incentivized to improve adherence.</li>
-        <li>Major health systems (Banner, Mayo, Dignity) actively running transitional-care and home-health pilots.</li>
+        <li style="margin-bottom: 8px;">One of the fastest-growing senior populations nationally (U.S. Census).</li>
+        <li style="margin-bottom: 8px;">High Medicare Advantage penetration (~<strong>55–56%</strong>) increases value-based care incentives.</li>
+        <li>Banner, Dignity, and Mayo operate large transitional-care & home-health programs supportive of adherence pilots.</li>
     </ul>
 </div>
 """
@@ -86,9 +86,9 @@ miami_html = """
     <h4 style="margin: 0; color: #20B2AA; border-bottom: 2px solid #20B2AA; padding-bottom: 5px;">Miami-Dade & Broward, FL</h4>
     <div style="font-size: 11px; font-weight: bold; color: #20B2AA; margin-top: 4px;">PROFILE: Hospital Transitional-Care (HTP)</div>
     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">
-        <li style="margin-bottom: 8px;">Florida has one of the oldest populations nationally (<strong>21%+ over age 65</strong>).</li>
-        <li style="margin-bottom: 8px;">High chronic disease burden (hypertension, diabetes, CHF) → medication-heavy regimens.</li>
-        <li>Strong telehealth adoption → aligns well with iRx’s app-centered workflow.</li>
+        <li style="margin-bottom: 8px;">One of the oldest populations nationally, with <strong>20–21% over age 65</strong> (U.S. Census).</li>
+        <li style="margin-bottom: 8px;">High chronic-disease prevalence (diabetes, hypertension, CHF) requiring medication-intensive care.</li>
+        <li>High telehealth utilization levels support iRx’s remote adherence monitoring workflow.</li>
     </ul>
 </div>
 """
@@ -99,9 +99,9 @@ la_html = """
     <h4 style="margin: 0; color: #800080; border-bottom: 2px solid #800080; padding-bottom: 5px;">Los Angeles County, CA</h4>
     <div style="font-size: 11px; font-weight: bold; color: #800080; margin-top: 4px;">PROFILE: Hospital Transitional-Care (HTP)</div>
     <ul style="padding-left: 20px; font-size: 13px; line-height: 1.4; margin-top: 10px;">
-        <li style="margin-bottom: 8px;">Largest county in the U.S. with highly complex care needs (<strong>1.7M safety-net patients</strong>).</li>
-        <li style="margin-bottom: 8px;">Significant older adult population + major public hospital networks (LAC-USC, Kaiser, UCLA).</li>
-        <li>California’s innovation-friendly digital health ecosystem ideal for pilot adoption.</li>
+        <li style="margin-bottom: 8px;">Largest county in the U.S. with substantial aging and medically complex populations.</li>
+        <li style="margin-bottom: 8px;">Major public systems (LAC-USC, Kaiser, UCLA) operate robust transitional-care programs.</li>
+        <li>California’s strong digital-health adoption climate supports pilot scalability.</li>
     </ul>
 </div>
 """
@@ -145,6 +145,28 @@ for loc in locations:
             """
         )
     ).add_to(m)
+
+sources_html = '''
+<div style="
+    position: fixed;
+    bottom: 20px; right: 20px; width: 360px;
+    background-color: white;
+    opacity: 0.95;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-family: Arial;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 9999;">
+<h4 style="margin:0; font-size:14px; font-weight:700;">Data Sources</h4>
+<ul style="font-size: 12px; margin-top:6px; padding-left:18px; line-height:1.4;">
+    <li>NAMI Illinois – Mental Health Statistics</li>
+    <li>CDC & Ohio Department of Health – Overdose & fentanyl data</li>
+    <li>U.S. Census Bureau – Aging population & county demographics</li>
+    <li>KFF – Medicare Advantage penetration by county</li>
+</ul>
+</div>
+'''
+m.get_root().html.add_child(folium.Element(sources_html))
 
 m.save("index.html")
 print("Map created successfully: index.html")
